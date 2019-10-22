@@ -20,7 +20,7 @@ resource "google_compute_instance" "sonarqube" {
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-9"
+      image = "centos-7-v20180129"
     }
   }
 
@@ -40,5 +40,5 @@ resource "google_compute_instance" "sonarqube" {
     name = "vault"
   }
 
-  metadata_startup_script = "sudo apt-get update -y;sudo apt-get install git -y; sudo git clone https://github.com/Diksha86/vault-dev.git; cd /vault; sudo chmod 777 /vault/*; sudo sh vault.sh"
+  metadata_startup_script = "sudo yum update -y;sudo yum install git -y; sudo git clone https://github.com/Diksha86/vault-dev.git; cd /vault; sudo chmod 777 /vault/*; sudo sh vault.sh"
 }
