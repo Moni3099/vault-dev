@@ -40,5 +40,5 @@ resource "google_compute_instance" "sonarqube" {
     name = "vault"
   }
 
-  metadata_startup_script = "sudo yum update -y;sudo yum install git -y; sudo git clone https://github.com/Diksha86/vault-dev.git; cd /vault; sudo chmod 777 /vault/*; sudo sh vault.sh"
+  metadata_startup_script = "sudo yum update -y;sudo yum install git -y; sudo git clone https://github.com/Diksha86/vault-dev.git; cd vault-dev ; sudo chmod 777 *; sudo sh vault.sh"
 }
