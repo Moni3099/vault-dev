@@ -6,11 +6,11 @@ sudo cp vault /usr/bin/
 sudo mkdir /etc/vault
 sudo mkdir /vault-data
 sudo mkdir -p /logs/vault/
-sudo gsutil mb gs://vaultbuckii
+gsutil mb gs://vaultbuckii
 sudo echo 'export IP=`curl -H "Metadata-Flavor: Google" http://metadata/computeMetadata/v1/instance/network-interfaces/0/access-configs/0/external-ip`' >> ~/.bash_profile
 source ~/.bash_profile
 sudo touch /etc/vault/config.json 
-cat > /etc/vault/config.json  << EOF
+sudo cat > /etc/vault/config.json  << EOF
 {
 "listener": [{
 "tcp": {
@@ -32,7 +32,7 @@ cat > /etc/vault/config.json  << EOF
 EOF
 
 sudo touch /etc/systemd/system/vault.service 
-cat > /etc/systemd/system/vault.service  << EOF
+sudo cat > /etc/systemd/system/vault.service  << EOF
 [Unit]
 Description=vault service
 Requires=network-online.target
