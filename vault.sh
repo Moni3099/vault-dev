@@ -60,6 +60,6 @@ sudo su
 cd ~
 export VAULT_ADDR=http://'$IP':8200
 echo "export VAULT_ADDR=http://'$IP':8200" >> ~/.bashrc
-vault status
-vault operator init > /etc/vault/init.file
-cat /etc/vault/init.file
+sudo vault status
+sudo vault operator init > /etc/vault/init.file
+sudo cat /etc/vault/init.file
