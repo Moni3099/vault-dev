@@ -5,13 +5,13 @@ provider "google" {
 }
 
 //SonarQube Instance
-resource "google_compute_address" "sonarqubeip" {
-  name   = "${var.sonarqube_instance_ip_name}"
-  region = "${var.sonarqube_instance_ip_region}"
+resource "google_compute_address" "vaultip" {
+  name   = "${var.vault_instance_ip_name}"
+  region = "${var.vault_instance_ip_region}"
 }
 
 
-resource "google_compute_instance" "sonarqube" {
+resource "google_compute_instance" "vault" {
   name         = "${var.instance_name}"
   machine_type = "n1-standard-2"
   zone         = "us-east1-b"
@@ -29,11 +29,11 @@ resource "google_compute_instance" "sonarqube" {
   #}
 
   network_interface {
-    network    = "${var.sonarvpc}"
-    subnetwork = "${var.sonarsub}"
+    network    = "${var.vaultvpc}"
+    subnetwork = "${var.vaultsub}"
     access_config {
       // Ephemeral IP
-      nat_ip = "${google_compute_address.sonarqubeip.address}"
+      nat_ip = "${google_compute_address.vaultip.address}"
     }
   }
   metadata = {
