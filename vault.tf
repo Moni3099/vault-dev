@@ -4,7 +4,6 @@ provider "google" {
   region      = "${var.region}"
 }
 
-//SonarQube Instance
 resource "google_compute_address" "vaultip" {
   name   = "${var.vault_instance_ip_name}"
   region = "${var.vault_instance_ip_region}"
