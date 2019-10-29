@@ -6,7 +6,7 @@ sudo cp vault /usr/bin/
 sudo mkdir /etc/vault
 sudo mkdir /vault-data
 sudo mkdir -p /logs/vault/
-gsutil mb gs://vaultbucky00
+gsutil mb gs://vaultbucketx00
 sudo echo 'export IP=`curl -H "Metadata-Flavor: Google" http://metadata/computeMetadata/v1/instance/network-interfaces/0/access-configs/0/external-ip`' >> ~/.bash_profile
 source ~/.bash_profile
 sudo touch /etc/vault/config.json
@@ -22,7 +22,7 @@ sudo cat > /etc/vault/config.json  << EOF
 "api_addr": "https://$IP:8200",
 "storage": {
 "gcs": {
-"bucket" : "vaultbucky00",
+"bucket" : "vaultbucketx00",
 "ha_enabled" : "true"
     }
  },
