@@ -9,7 +9,7 @@ pipeline{
         }
         stage('Mvn sh cmd'){
            steps{
-              sh "echo'Hello World'"
+              sh "echo 'Hello World' "
                   }
                }
            }
