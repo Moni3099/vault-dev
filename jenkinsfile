@@ -1,7 +1,7 @@
 pipeline{
     agent any
     enviornment{
-        DOCKER TAG = getDcoekrTag()
+        DOCKER TAG = getDockerTag()
      }
     stages{
         stage('Git Checkout'){
