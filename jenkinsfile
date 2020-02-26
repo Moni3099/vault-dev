@@ -9,7 +9,7 @@ pipeline{
         }
         stage('Mvn sh cmd'){
            steps{
-              sh label: '', script: 'mvn  clean  package'
+              sh "echo'Hello World'"
                   }
                }
            }
