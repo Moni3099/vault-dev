@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    enviornment{
+        DOCKER TAG = getDcoekrTag()
+     }
     stages{
         stage('Git Checkout'){
             steps{
@@ -9,9 +12,12 @@ pipeline{
         }
         stage('Build Docker Image'){
            steps{
-               sh "echo 'Hello World'"
+               sh "docker build . -t moni1693/tomcat:${DOCKER-TAG}"
+               }
            }
-        
-        }
-    }
-}
+      }
+ }
+ def getDockerTag(){
+     def tag = sh script: 'git rev-parse HEAD', returnStdout: true
+     return tag
+  }
