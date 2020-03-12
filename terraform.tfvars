@@ -1,6 +1,6 @@
 region = "us-central1"
 gcp_project = "seventh-sunbeam-248205"
-credentials= "credentials.json"
+//credentials= "credentials.json"
 vaultvpc = "default"
 vaultsub = "default"
 // elk_instance_name = "elk"
