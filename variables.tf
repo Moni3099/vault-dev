@@ -1,6 +1,6 @@
 variable "region" {}
 variable "gcp_project" {}
-//variable "credentials" {}
+variable "credentials" {}
 variable "vaultvpc" {}
 variable "vaultsub" {}
 // variable "elk_instance_name" {}
