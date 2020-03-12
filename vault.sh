@@ -19,7 +19,7 @@ sudo cat > /etc/vault/config.json  << EOF
 "tls_disable" : 1
 }
 }],
-"api_addr": "https://$IP:8200",
+"api_addr": "http://$IP:8200",
 "storage": {
 "gcs": {
 "bucket" : "vaultbucketx00",
@@ -60,5 +60,5 @@ sudo systemctl status vault.service
 sudo systemctl enable vault.service
 sudo su
 cd ~
-export VAULT_ADDR=https://$IP:8200
-echo "export VAULT_ADDR=https://$IP:8200" >> ~/.bashrc
+export VAULT_ADDR=http://$IP:8200
+echo "export VAULT_ADDR=http://$IP:8200" >> ~/.bashrc
