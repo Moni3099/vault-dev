@@ -1,12 +1,4 @@
-pipeline{
-    agent any
-	
-    stages{
-        stage('Git Checkout'){
-            steps{
-                git credentialsId: 'github', url: 'https://github.com/Moni3099/vault-dev'
-                
-            }
-        }
+node{
+  stage('SCM Checkout'){
+     git credentialsId: 'github', url: 'https://github.com/Moni3099/vault-dev'
     }
-}
