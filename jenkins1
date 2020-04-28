@@ -1,4 +1,0 @@
-node{
-  stage('SCM Checkout'){
-     git credentialsId: 'github', url: 'https://github.com/Moni3099/vault-dev'
-    }
