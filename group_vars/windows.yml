@@ -1,6 +1,6 @@
 ---
 ansible_user: mselvam
-ansible_password: 
+ansible_password: AE.?=6rnaF}L9#% 
 ansible_port: 5986
 ansible_connection: winrm
 ansible_winrm_server_cert_validation: ignore
