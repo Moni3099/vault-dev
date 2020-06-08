@@ -1,6 +1,6 @@
 ---
-ansible_user: "{{ lookup('env', 'Usr') }}"
-ansible_password: "{{ lookup('env', 'Pass') }}"
+ansible_user: mselvam
+ansible_password: "{{ lookup('env', 'connecting') }}"
 ansible_port: 5986
 ansible_connection: winrm
 ansible_winrm_server_cert_validation: ignore
